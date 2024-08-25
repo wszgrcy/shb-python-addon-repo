@@ -77,7 +77,7 @@ def determine_pip_install_arguments():
     if include_wheel(pre):
         args.append("wheel")
 
-    return ["install", "--upgrade", "--force-reinstall",'-i',os.environ['registry']] + args
+    return ["install", "--upgrade", "--force-reinstall",'-i',os.environ['PIP_REGISTRY']] + args
 
 
 def monkeypatch_for_cert(tmpdir):
